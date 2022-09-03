@@ -93,6 +93,7 @@ box-icon:hover {
   transition: all .3s ease-in-out;
   border-radius: 10px;
   padding: 10px 20px;
+  white-space: nowrap;
 }
 
 .sidebar ul li a .links__name{
@@ -158,12 +159,15 @@ box-icon:hover {
   margin-left: 10px;
 }
 
-.sidebar ul .searchbox-li box-icon:hover {
-  background: rgba(255, 255, 255, 0.872);
+.sidebar ul .searchbox-li:hover {
   fill: #1d1b31;
 }
 
 .sidebar ul {
+  padding-left: 10px;
+}
+
+.sidebar.active ul {
   padding-left: 20px;
 }
 
@@ -225,7 +229,6 @@ box-icon:hover {
   transition: 0s;
   opacity: 0;
   pointer-events: none;
-  display: none;
 }
 
 .sidebar.active ul li .tooltip {

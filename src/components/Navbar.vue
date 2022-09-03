@@ -11,7 +11,7 @@
     <ul class="nav__list">
         <li class="searchbox-li">
             
-                <box-icon name='search' animation="burst-hover"></box-icon>
+                <box-icon name='search' animation="burst-hover" @click="handleClickSearch"></box-icon>
                 <input type="text" placeholder="Search...">
             
         </li>
@@ -86,6 +86,10 @@ export default {
     methods: {
         handleClick() {
             this.isActive = !this.isActive;
+        },
+        handleClickSearch() {
+            if(this.isActive === false)
+                this.isActive = true;
         }
     }
 }
