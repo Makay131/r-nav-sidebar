@@ -1,17 +1,17 @@
 <template>
-    <nav class="sidebar">
+    <nav class="sidebar" :class="{active: isActive}">
     <div class="logo__content">
         <div class="logo">
             <box-icon type='logo' name='meta' animation="spin-hover" ></box-icon>
             <div class="logo__name">Navbar</div>
         </div>
-        <box-icon name='menu' ></box-icon>
+        <box-icon name='menu' @click="handleClick" ></box-icon>
     </div>
 
     <ul class="nav__list">
         <li class="searchbox-li">
             
-                <box-icon name='search' animation="burst-hover" ></box-icon>
+                <box-icon name='search' animation="burst-hover"></box-icon>
                 <input type="text" placeholder="Search...">
             
         </li>
@@ -78,7 +78,16 @@
 import 'boxicons';
 
 export default {
-
+    data() {
+        return {
+            isActive: false,
+        }
+    },
+    methods: {
+        handleClick() {
+            this.isActive = !this.isActive;
+        }
+    }
 }
 </script>
 
