@@ -1,7 +1,9 @@
 <template>
   <div id="body">
   <Navbar />
-  <div id="home__content">Coooontent</div>
+  <div id="home__content">
+    <h1>Content Here</h1>
+  </div>
   </div>
 </template>
 
@@ -31,13 +33,6 @@ export default {
         overflow: hidden;
 }
 
-#home__content {
-  position: absolute;
-  height: 100%;
-  width: calc(100% - 240px);
-  left: 260px;
-  padding: 6px 14px;
-}
 
 
 </style>

@@ -27,6 +27,8 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+
+  transition: all .4s ease;
 }
 
 .sidebar.active .logo__content .logo {
@@ -99,6 +101,7 @@ box-icon:hover {
 .sidebar ul li a .links__name{
   visibility: hidden;
   display: none;
+  transition: all .4s ease-in-out;
 }
 .sidebar.active ul li a .links__name {
   visibility: visible;
@@ -189,6 +192,7 @@ box-icon:hover {
   display: flex;
   align-items: center;
   gap: 10px;
+  opacity: 1;
 }
 
 .profile .profile__details img {
@@ -208,11 +212,19 @@ box-icon:hover {
   font-size: 12px;
 }
 
+
+.sidebar.active ~ #home__content {
+  width: calc(100% - 280px);
+  left: 280px;
+}
+
+
 #home__content {
   position: absolute;
   height: 100%;
-  width: calc(100% - 240px);
-  left: 240px;
+  width: calc(100% - 120px);
+  left: 120px;
+  transition: all .4s ease-in-out;
 }
 
 .sidebar ul li .tooltip {
@@ -245,6 +257,7 @@ box-icon:hover {
 .sidebar .links__name {
   opacity: 0;
   pointer-events: none;
+  transition: all .4s ease-in-out;
 }
 .sidebar.active .links__name {
   opacity: 1;
@@ -253,4 +266,7 @@ box-icon:hover {
 
 .sidebar .profile__details {
   display: none;
+  opacity: 0;
+
+  transition: all .8s ease;
 }

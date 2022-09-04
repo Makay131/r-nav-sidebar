@@ -80,7 +80,7 @@ import 'boxicons';
 export default {
     data() {
         return {
-            isActive: false,
+            isActive: true,
         }
     },
     methods: {
